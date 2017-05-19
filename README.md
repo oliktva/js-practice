@@ -3,7 +3,7 @@
 
 * 01 - JavaScript Drum Kit - [DONE](https://oliktva.github.io/js-practice/01%20-%20JavaScript%20Drum%20Kit/)
 * 02 - JS and CSS Clock	- [DONE](https://oliktva.github.io/js-practice/02%20-%20JS%20and%20CSS%20Clock/)
-* 03 - CSS Variables
+* 03 - CSS Variables - [DONE](https://oliktva.github.io/js-practice/03%20-%20CSS%20Variables/)
 * 04 - Array Cardio Day 1
 * 05 - Flex Panel Gallery
 * 06 - Type Ahead

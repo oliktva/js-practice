@@ -5,7 +5,7 @@
 * 02 - JS and CSS Clock	- [DONE](https://oliktva.github.io/js-practice/02%20-%20JS%20and%20CSS%20Clock/)
 * 03 - CSS Variables - [DONE](https://oliktva.github.io/js-practice/03%20-%20CSS%20Variables/)
 * 04 - Array Cardio Day 1 - [DONE](https://oliktva.github.io/js-practice/04%20-%20Array%20Cardio%20Day%201/)
-* 05 - Flex Panel Gallery
+* 05 - Flex Panel Gallery - [DONE](https://oliktva.github.io/js-practice/05%20-%20Flex%20Panel%20Gallery/)
 * 06 - Type Ahead
 * 07 - Array Cardio Day 2
 * 08 - Fun with HTML5 Canvas

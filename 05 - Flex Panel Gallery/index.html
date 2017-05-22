@@ -146,7 +146,7 @@
     };
 
     function onTransitionend(evt) {
-      if (evt.propertyName === 'flex-grow') {
+      if (evt.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
       }
     };

@@ -7,7 +7,7 @@
 * 04 - Array Cardio Day 1 - [DONE](https://oliktva.github.io/js-practice/04%20-%20Array%20Cardio%20Day%201/)
 * 05 - Flex Panel Gallery - [DONE](https://oliktva.github.io/js-practice/05%20-%20Flex%20Panel%20Gallery/)
 * 06 - Type Ahead - [DONE](https://oliktva.github.io/js-practice/06%20-%20Type%20Ahead/)
-* 07 - Array Cardio Day 2
+* 07 - Array Cardio Day 2 - [DONE](https://oliktva.github.io/js-practice/07%20-%20Array%20Cardio%20Day%202/)
 * 08 - Fun with HTML5 Canvas
 * 09 - Dev Tools Domination
 * 10 - Hold Shift and Check Checkboxes

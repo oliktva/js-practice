@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+<script>
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+const cities = [];
+const search = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+function loadData() {
+  fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => cities.push(...data));
+};
+
+
+  function findMatches(wordToMatch, cities) {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return cities.filter(item => {
+      const isContainsCity = item.city.match(regex);
+      const isContainsState = item.state.match(regex);
+      if (isContainsCity && isContainsState) {
+        item.priority = 3;
+      } else if (isContainsCity && !isContainsState) {
+        item.priority = 2;
+      } else if (!isContainsCity && isContainsState) {
+        item.priority = 1;
+      }
+      return isContainsCity || isContainsState;
+    }).sort((a, b) => b.priority - a.priority);
+  };
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function onInputValueChange() {
+    const value = search.value;
+    const foundCities = findMatches(value, cities);
+    let fragment = document.createDocumentFragment();
+
+    foundCities.forEach(item => {
+      let element = document.createElement('li');
+      const regex = new RegExp(value, 'gi');
+      const cityName = item.city.replace(regex, () => `<span class="hl">${value}</span>`);
+      const stateName = item.state.replace(regex, `<span class="hl">${value}</span>`);
+      element.innerHTML =
+        `<span class="name">${cityName}, ${stateName}</span>
+         <span class="population">${numberWithCommas(item.population)}</span>`
+      fragment.appendChild(element);
+    });
+
+    suggestions.innerHTML = '';
+    suggestions.appendChild(fragment);
+  }
+
+  loadData();
+  search.addEventListener('change', onInputValueChange);
+  search.addEventListener('keyup', onInputValueChange);
+</script>
+  </body>
+</html>

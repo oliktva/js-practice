@@ -9,7 +9,7 @@
 * 06 - Type Ahead - [DONE](https://oliktva.github.io/js-practice/06%20-%20Type%20Ahead/)
 * 07 - Array Cardio Day 2 - [DONE](https://oliktva.github.io/js-practice/07%20-%20Array%20Cardio%20Day%202/)
 * 08 - Fun with HTML5 Canvas - [DONE](https://oliktva.github.io/js-practice/08%20-%20Fun%20with%20HTML5%20Canvas/)
-* 09 - Dev Tools Domination
+* 09 - Dev Tools Domination - [DONE](https://oliktva.github.io/js-practice/09%20-%20Dev%20Tools%20Domination/)
 * 10 - Hold Shift and Check Checkboxes
 * 11 - Custom Video Player
 * 12 - Key Sequence Detection

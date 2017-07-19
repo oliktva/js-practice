@@ -48,7 +48,6 @@ body {
   line-height:1;
   color:white;
   text-align: center;
-  outline:0;
   padding: 0;
   cursor:pointer;
   max-width:50px;
@@ -68,14 +67,9 @@ body {
   position: absolute;
   bottom:0;
   width: 100%;
-  transform: translateY(100%) translateY(-5px);
   transition:all .3s;
   flex-wrap:wrap;
   background:rgba(0,0,0,0.1);
-}
-
-.player:hover .player__controls {
-  transform: translateY(0);
 }
 
 .player:hover .progress {
@@ -111,9 +105,6 @@ input[type=range] {
   background:transparent;
   width: 100%;
   margin: 0 5px;
-}
-input[type=range]:focus {
-  outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;

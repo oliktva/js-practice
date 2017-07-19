@@ -9,12 +9,14 @@
 <script>
   let pressed = [];
   let secretCode = 'secret';
+  let emojiList = ['&#129412;', '&#128142;', '&#127800;', '&#127821;', '&#127870;', '&#10024;', '&#127880;', '&#127881;', '&#127922;', '&#128302;', '&#128330;'];
 
   document.addEventListener('keydown', evt => {
     pressed.push(evt.key);
     pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
     if (pressed.join('').includes(secretCode)) {
-      cornify_add();
+      const emoji = emojiList[Math.floor(Math.random()*emojiList.length)];
+      document.body.innerHTML = `<div style="display:flex;justify-content:center;align-items:center;height:100vh;font-size:24px;"><span>Hooray! ${emoji}<span></div>`;
     }
   });
 </script>

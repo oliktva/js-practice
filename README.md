@@ -13,7 +13,7 @@
 * 10 - Hold Shift and Check Checkboxes - [DONE](https://oliktva.github.io/js-practice/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/)
 * 11 - Custom Video Player - [DONE](https://oliktva.github.io/js-practice/11%20-%20Custom%20Video%20Player/)
 * 12 - Key Sequence Detection - [DONE](https://oliktva.github.io/js-practice/12%20-%20Key%20Sequence%20Detection/)
-* 13 - Slide in on Scroll
+* 13 - Slide in on Scroll - [DONE](https://oliktva.github.io/js-practice/13%20-%20Slide%20in%20on%20Scroll/)
 * 14 - JavaScript References VS Copying
 * 15 - LocalStorage
 * 16 - Mouse Move Shadow

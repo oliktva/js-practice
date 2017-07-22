@@ -14,7 +14,7 @@
 * 11 - Custom Video Player - [DONE](https://oliktva.github.io/js-practice/11%20-%20Custom%20Video%20Player/)
 * 12 - Key Sequence Detection - [DONE](https://oliktva.github.io/js-practice/12%20-%20Key%20Sequence%20Detection/)
 * 13 - Slide in on Scroll - [DONE](https://oliktva.github.io/js-practice/13%20-%20Slide%20in%20on%20Scroll/)
-* 14 - JavaScript References VS Copying
+* 14 - JavaScript References VS Copying - [DONE](https://oliktva.github.io/js-practice/14%20-%20JavaScript%20References%20VS%20Copying/)
 * 15 - LocalStorage
 * 16 - Mouse Move Shadow
 * 17 - Sort Without Articles

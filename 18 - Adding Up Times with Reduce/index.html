@@ -182,10 +182,9 @@
     </li>
   </ul>
 <script>
-
   const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
 
-  const seconds = timeNodes
+  let seconds = timeNodes
     .map(node => node.dataset.time)
     .map(timeCode => {
       const [mins, secs] = timeCode.split(':').map(parseFloat);
@@ -193,14 +192,22 @@
     })
     .reduce((total, vidSeconds) => total + vidSeconds);
 
-    let secondsLeft = seconds;
-    const hours = Math.floor(secondsLeft / 3600);
-    secondsLeft = secondsLeft % 3600;
+  function addZeroIfNeeds(time) {
+    return time < 10 ? `0${time}`: `${time}`;
+  }
 
-    const mins = Math.floor(secondsLeft / 60);
-    secondsLeft = secondsLeft % 60;
+  function getFormatTime(secs) {
+    let s = secs;
+    const hours = Math.floor(s / 3600);
+    s = s % 3600;
 
-    console.log(hours, mins, secondsLeft);
+    const mins = Math.floor(s / 60);
+    s = s % 60;
+
+    return `${addZeroIfNeeds(hours)}:${addZeroIfNeeds(mins)}:${addZeroIfNeeds(s)}`
+  }
+
+  console.log(getFormatTime(seconds));
 
 </script>
 </body>

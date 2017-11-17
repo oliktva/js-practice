@@ -24,7 +24,7 @@
 * 21 - Geolocation
 * 22 - Follow Along Link Highlighter
 * 23 - Speech Synthesis
-* 24 - Sticky Nav
+* 24 - Sticky Nav - [DONE](https://oliktva.github.io/js-practice/24%20-%20Sticky%20Nav/)
 * 25 - Event Capture, Propagation, Bubbling and Once
 * 26 - Stripe Follow Along Nav
 * 27 - Click and Drag

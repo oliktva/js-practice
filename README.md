@@ -25,7 +25,7 @@
 * 22 - Follow Along Link Highlighter
 * 23 - Speech Synthesis
 * 24 - Sticky Nav - [DONE](https://oliktva.github.io/js-practice/24%20-%20Sticky%20Nav/)
-* 25 - Event Capture, Propagation, Bubbling and Once
+* 25 - Event Capture, Propagation, Bubbling and Once - [DONE](https://oliktva.github.io/js-practice/25%20-%20Event%20Capture,%20Propagation,%20Bubbling%20and%20Once/)
 * 26 - Stripe Follow Along Nav
 * 27 - Click and Drag
 * 28 - Video Speed Controller

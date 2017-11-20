@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+<body class="bod">
+  <div class="check-block">
+    <label>
+      <input id="bubbling" type="radio" name="check" checked>
+      <span>with bubbling</span>
+    </label>
+    <label>
+      <input id="stop" type="radio" name="check">
+      <span>stop propagation</span>
+    </label>
+    <label>
+      <input id="capture" type="radio" name="check">
+      <span>capture true</span>
+    </label>
+    <label>
+      <input id="once" type="radio" name="check">
+      <span>once true</span>
+    </label>
+  </div>
+
+  <div id="one" class="block">
+    <div id="two" class="block">
+      <div id="three" class="block">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after { box-sizing: inherit; }
+
+  .block {
+    width:100%;
+    padding:100px;
+  }
+
+  #one {
+    background: thistle;
+  }
+
+  #two {
+    background:mistyrose;
+  }
+
+  #three {
+    background:coral;
+  }
+
+  label {
+    padding-right: 16px;
+    white-space: nowrap;
+  }
+</style>
+
+<button></button>
+<script>
+  const divs = document.querySelectorAll('.block');
+  const checkBlock = document.querySelector('.check-block');
+
+  function logText(message, color) {
+    console.log(`%c ${message}`, `color: ${color}`);
+  }
+
+  function logTextWithBubbling() {
+    logText(`with bubbling: ${this.id}`, 'blue');
+  }
+
+  function logTextWithStop(e) {
+    logText(`stop propagation: ${this.id}`, 'red');
+    e.stopPropagation(); // stop bubbling!
+  }
+
+  function logTextWithCaptureTrue() {
+    logText(`capture true: ${this.id}`, 'green');
+  }
+
+  function logTextOnce() {
+    logText(`once true: ${this.id}`, 'orange');
+  }
+
+function check() {
+  if (this.checked) {
+    switch (this.id) {
+      case 'bubbling': {
+        divs.forEach(div => div.addEventListener('click', logTextWithBubbling));
+        divs.forEach(div => div.removeEventListener('click', logTextWithStop));
+        divs.forEach(div => div.removeEventListener('click', logTextWithCaptureTrue, { capture: true }));
+        divs.forEach(div => div.removeEventListener('click', logTextOnce, { once: true }));
+        break;
+      };
+      case 'stop': {
+        divs.forEach(div => div.removeEventListener('click', logTextWithBubbling));
+        divs.forEach(div => div.addEventListener('click', logTextWithStop));
+        divs.forEach(div => div.removeEventListener('click', logTextWithCaptureTrue, { capture: true }));
+        divs.forEach(div => div.removeEventListener('click', logTextOnce, { once: true }));
+        break;
+      };
+      case 'capture': {
+        divs.forEach(div => div.removeEventListener('click', logTextWithBubbling));
+        divs.forEach(div => div.removeEventListener('click', logTextWithStop));
+        divs.forEach(div => div.addEventListener('click', logTextWithCaptureTrue, { capture: true }));
+        divs.forEach(div => div.removeEventListener('click', logTextOnce, { once: true }));
+        break;
+      };
+      case 'once': {
+        divs.forEach(div => div.removeEventListener('click', logTextWithBubbling));
+        divs.forEach(div => div.removeEventListener('click', logTextWithStop));
+        divs.forEach(div => div.removeEventListener('click', logTextWithCaptureTrue, { capture: true }));
+        divs.forEach(div => div.addEventListener('click', logTextOnce, { once: true }));
+        break;
+      };
+    }
+  }
+};
+
+  checkBlock.querySelectorAll('input[type="radio"]').forEach(radio => radio.addEventListener('change', check));
+  check.bind(checkBlock.querySelector('[checked]'))();
+
+</script>
+</body>
+</html>

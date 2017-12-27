@@ -19,15 +19,11 @@
 * 16 - Mouse Move Shadow - [DONE](https://oliktva.github.io/js-practice/16%20-%20Mouse%20Move%20Shadow/)
 * 17 - Sort Without Articles - [DONE](https://oliktva.github.io/js-practice/17%20-%20Sort%20Without%20Articles/)
 * 18 - Adding Up Times with Reduce - [DONE](https://oliktva.github.io/js-practice/18%20-%20Adding%20Up%20Times%20with%20Reduce/)
-* 19 - Webcam Fun
-* 20 - Speech Detection
-* 21 - Geolocation
 * 22 - Follow Along Link Highlighter - [DONE](https://oliktva.github.io/js-practice/22%20-%20Follow%20Along%20Link%20Highlighter/)
-* 23 - Speech Synthesis
 * 24 - Sticky Nav - [DONE](https://oliktva.github.io/js-practice/24%20-%20Sticky%20Nav/)
 * 25 - Event Capture, Propagation, Bubbling and Once - [DONE](https://oliktva.github.io/js-practice/25%20-%20Event%20Capture,%20Propagation,%20Bubbling%20and%20Once/)
 * 26 - Stripe Follow Along Nav
-* 27 - Click and Drag
+* 27 - Click and Drag - [DONE](https://oliktva.github.io/js-practice/27%20-%20Click%20and%20Drag/)
 * 28 - Video Speed Controller
 * 29 - Countdown Timer
 * 30 - Whack A Mole game

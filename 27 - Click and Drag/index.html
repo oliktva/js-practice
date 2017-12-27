@@ -34,38 +34,39 @@
     <div class="item item25">25</div>
   </div>
 
-<script>
-  const slider = document.querySelector('.items');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  <script>
+    const slider = document.querySelector('.items');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
+    function beginDraggingHandler(evt) {
+      isDown = true;
+      slider.classList.add('active');
+      startX = evt.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    }
 
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
+    function stopDraggingHandler() {
+      isDown = false;
+      slider.classList.remove('active');
+    }
 
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
+    function draggingHandler(evt) {
+      if (!isDown) return;
 
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;  // stop the fn from running
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3;
-    slider.scrollLeft = scrollLeft - walk;
-  });
+      const x = evt.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 3;
 
-</script>
+      evt.preventDefault();
+      slider.scrollLeft = scrollLeft - walk;
+    }
+
+    slider.addEventListener('mousedown', beginDraggingHandler);
+    slider.addEventListener('mousemove', draggingHandler);
+    slider.addEventListener('mouseleave', stopDraggingHandler);
+    slider.addEventListener('mouseup', stopDraggingHandler);
+  </script>
 
   </body>
 </html>

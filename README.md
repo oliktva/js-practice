@@ -22,7 +22,7 @@
 * 22 - Follow Along Link Highlighter - [DONE](https://oliktva.github.io/js-practice/22%20-%20Follow%20Along%20Link%20Highlighter/)
 * 24 - Sticky Nav - [DONE](https://oliktva.github.io/js-practice/24%20-%20Sticky%20Nav/)
 * 25 - Event Capture, Propagation, Bubbling and Once - [DONE](https://oliktva.github.io/js-practice/25%20-%20Event%20Capture,%20Propagation,%20Bubbling%20and%20Once/)
-* 26 - Stripe Follow Along Nav
+* 26 - Stripe Follow Along Nav - [DONE](https://oliktva.github.io/js-practice/26%20-%20Stripe%20Follow%20Along%20Nav/)
 * 27 - Click and Drag - [DONE](https://oliktva.github.io/js-practice/27%20-%20Click%20and%20Drag/)
 * 28 - Video Speed Controller
 * 29 - Countdown Timer

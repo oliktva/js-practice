@@ -24,6 +24,5 @@
 * 25 - Event Capture, Propagation, Bubbling and Once - [DONE](https://oliktva.github.io/js-practice/25%20-%20Event%20Capture,%20Propagation,%20Bubbling%20and%20Once/)
 * 26 - Stripe Follow Along Nav - [DONE](https://oliktva.github.io/js-practice/26%20-%20Stripe%20Follow%20Along%20Nav/)
 * 27 - Click and Drag - [DONE](https://oliktva.github.io/js-practice/27%20-%20Click%20and%20Drag/)
-* 28 - Video Speed Controller
-* 29 - Countdown Timer
-* 30 - Whack A Mole game
+* 29 - Countdown Timer - [DONE](https://oliktva.github.io/js-practice/29%20-%20Countdown%20Timer/)
+* 30 - Whack A Mole game - [DONE](https://oliktva.github.io/js-practice/30%20-%20Whack%20A%20Mole%20game)
